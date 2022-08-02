@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sokovi</title>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <link rel="stylesheet" type="text/css" href="style.css">
+  
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" 
+rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+   
+
+
+<body>
+    
+  <header >
+        
+    <nav class="navbar  navbar-expand-lg  bg-light">
+        <div  class="container-fluid  navigacija">
+          <img src="./img/favpng_orange-juice-logo-fruit.png" alt="Logo" width="100" height="80">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Meni</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">O kompaniji</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Galerija</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Kontakt</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+</header>
+
+    
+    
+    <div class="container">
+      <div class="mixCart sticky-top">
+      <div class="ispodVoca">
+        <span id="naruciteS"><b>Moj mix:</b></span><span id="sok"></span></br>
+    
+        <div id=warning></div>
+        <p></p>
+        <div class="cena"></div>
+        
+        
+     
+    </div>
+    <label>Izaberi kolicinu</label>
+        <input type="number" id="kolicina" name="quantity" value="1" min="1">
+        <button onClick="naruciSok()" class="donjiDugmici" id="naruci">Dodaj u korpu</button>
+
+       <p></p>
+    
+    <button id="novMiks" class="donjiDugmici">Napravi nov mix</button>
+    <div class="korpa">
+        <ul style="list-style-type:none" id="korpica" class="korpara"><b>KORPA:</b>
+            
+        
+    </ul>
+    </div>
+    <p></p>
+    <div id="totalko">
+      Ukupna cena: 0 dinara
+  </div>
+  
+  <button id="isprazniKorpu">Isprazni korpu</button>
+  <button id="naruci">Naruči</button>
+</div>
+      <div id="row" class="row justify-content-center">
+    <div class="card" style="width: 18rem;">
+        <img src="./img/jagode.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Jagoda</h5>
+          <p class="card-text">Cena: 40 dinara</p>
+          <button id="jagoda" value="40"  class="btn btn-primary">Dodaj</button>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="./img/maline.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Malina</h5>
+          <p class="card-text">Cena: 50 dinara</p>
+          <button id="malina" value="50"  class="btn btn-primary">Dodaj</button>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="./img/borovnice.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Borovnica</h5>
+          <p class="card-text">Cena: 60 dinara</p>
+          <button id="borovnica" value="60"  class="btn btn-primary">Dodaj</button>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="./img/pomorandze.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Pomorandža</h5>
+          <p class="card-text">Cena: 40 dinara</p>
+          <button id="pomorandza" value="40"  class="btn btn-primary">Dodaj</button>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="./img/limun.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Limun</h5>
+          <p class="card-text">Cena: 15 dinara</p>
+          <button id="limun" value="15"  class="btn btn-primary">Dodaj</button>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="./img/jabuke.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Jabuka</h5>
+          <p class="card-text">Cena: 30 dinara</p>
+          <button id="jabuka" value="30"  class="btn btn-primary">Dodaj</button>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="./img/kruska.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Kruška</h5>
+          <p class="card-text">Cena: 50 dinara</p>
+          <button id="kruska" value="50"  class="btn btn-primary">Dodaj</button>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="./img/sargarepa.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Šargarepa</h5>
+          <p class="card-text">Cena: 30 dinara</p>
+          <button id="sargarepa" value="30"  class="btn btn-primary">Dodaj</button>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="./img/djumbir.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Djumbir</h5>
+          <p class="card-text">Cena: 50 dinara</p>
+          <button id="djumbir" value="50"  class="btn btn-primary">Dodaj</button>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="./img/kivi.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Kivi</h5>
+          <p class="card-text">Cena: 65 dinara</p>
+          <button id="kivi" value="65"  class="btn btn-primary">Dodaj</button>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="./img/ananas.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Ananas</h5>
+          <p class="card-text">Cena: 80 dinara</p>
+          <button id="ananas" value="80"  class="btn btn-primary">Dodaj</button>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="./img/visnje.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Visnja</h5>
+          <p class="card-text">Cena: 40 dinara</p>
+          <button id="visnja" value="40"  class="btn btn-primary">Dodaj</button>
+        </div>
+      </div>
+
+   
+      </div>
+   
+  
+ 
+     
+      
+      
+      
+     
+         
+  </div>
+  </div>
+  </div>
+  </div>
+</div>
+
+<footer class="footer-16371">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-9 text-center">
+        <div class="footer-site-logo mb-4">
+          <img src="./img/favpng_orange-juice-logo-fruit.png" alt="Logo" width="100" height="80">
+        </div>
+        <ul class="list-unstyled nav-links mb-5">
+          <li><a href="#">Meni</a></li>
+          <li><a href="#">O kompaniji</a></li>
+          <li><a href="#">Galerija</a></li>
+          <li><a href="#">Kontakt</a></li>
+          
+          
+          
+        </ul>
+
+        <div class="social mb-4">
+          <h3></h3>
+          <ul class="list-unstyled">
+            <li class="in"><a href="#"><span class="icon-instagram"></span></a></li>
+            <li class="fb"><a href="#"><span class="icon-facebook"></span></a></li>
+            <li class="tw"><a href="#"><span class="icon-twitter"></span></a></li>
+            <li class="pin"><a href="#"><span class="icon-pinterest"></span></a></li>
+            <li class="dr"><a href="#"><span class="icon-dribbble"></span></a></li>
+          </ul>
+        </div>
+
+        <div class="copyright">
+          <p class="mb-0"><small>&copy; Sokovi.rs</small></p>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>  
+</body>
+
+</html>
